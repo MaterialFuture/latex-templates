@@ -40,6 +40,9 @@
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
+\newcommand{\expItem}[1]{
+  \item\small{#1 \vspace{-3pt}}
+}
 \newcommand{\resumeSubheading}[4]{
  \vspace{-1pt}\item
  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -54,18 +57,27 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
+% Easy to use Heading Template
+\newcommand{\resumeHeading}[5]{
+ \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+   \textbf{#1}
+   \cr Portfolio: \textit{#2}
+   & Email: \textit{#3}
+   \cr Location: \textit{#4}
+   & \textit{#5}
+ \end{tabular*}
+}
+
+% -------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://your.site}{\Large Your Name}}
-  \cr Portfolio: \href{https://your.site}{https://your.site/}
-  & Email: \href{mailto:you@your.site}{you@your.site}
-  \cr Location: Somewhere, USA
-  & Citizen, No Sponsorship
-\end{tabular*}
+\resumeHeading{\href{https://your.site}{\Large Konstantine Vogiantzis}}
+{\href{https://your.site}{https://your.sire}}
+{\href{mailto:you@your.site}{you@your.site}}
+{Austin, TX}
+{US Citizen, No Sponsorship}
 
 %-----------EDUCATION-----------------
 \section{Qualifications}
@@ -82,9 +94,9 @@
       {Employer}{Full Time}
       {Project Manager}{Mar. 20xx - Present}
       \resumeItemListStart
-      \item{Some thing I did and managed}
-      \item{Another great thing I did}
-      \item{Wow, more things}
+      \expItem{Some thing I did and managed}
+      \expItem{Another great thing I did}
+      \expItem{Wow, more things}
     \resumeItemListEnd
   \resumeSubHeadingListEnd
 
